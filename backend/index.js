@@ -1,16 +1,18 @@
-require("dotenv").config();
+require("dotenv").config();  // load .env
+
 const express = require("express");
-const app = express();
+
+const app=express()
+
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-// Models
 const { Holdingmodel } = require("./model/Holding");
 const { Positionmodel } = require("./model/Position");
-const {Ordermodel}=require("./model/Order")
+const { Ordermodel } = require("./model/Order");
 
 // User schema
 const userSchema = new mongoose.Schema({
