@@ -1,16 +1,20 @@
-require("dotenv").config();
-const express = require("express");
-const app = express();
-const mongoose = require("mongoose");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+import dotenv from "dotenv";
+dotenv.config();
 
-// Models
-const { Holdingmodel } = require("./model/Holding");
-const { Positionmodel } = require("./model/Position");
-const {Ordermodel}=require("./model/Order")
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import bodyParser from "body-parser";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+
+// import models
+import { Holdingmodel } from "./model/Holding.js";
+import { Positionmodel } from "./model/Position.js";
+import { Ordermodel } from "./model/Order.js";
+
+const app=express()
+
 
 // User schema
 const userSchema = new mongoose.Schema({
