@@ -1,8 +1,7 @@
 require("dotenv").config();  // load .env
 
 const express = require("express");
-
-const app=express()
+const app = express();
 
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -161,8 +160,6 @@ app.post("/newOrder", async (req, res) => {
     res.status(500).json({ message: "Server Error" });
   }
 });
-
-
 
 // ✅ Start server
 app.listen(process.env.PORT || 5000, () => {
