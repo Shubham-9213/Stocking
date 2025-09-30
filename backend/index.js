@@ -71,7 +71,7 @@ app.post("/login", async (req, res) => {
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET || "secret123", {
     expiresIn: "1h",
   });
-
+https://github.com/Shubham-9213
   res.json({ message: "Login successful", token });
 });
 
